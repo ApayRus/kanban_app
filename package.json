@@ -1,0 +1,21 @@
+{
+  "name": "kanban_app",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "webpack": "~1.12.10",
+    "html-webpack-plugin": "~1.7.0",
+    "webpack-dev-server": "~1.14.0",
+    "webpack-merge": "~0.7.1",
+    "style-loader": "~0.13.0",
+    "css-loader": "~0.23.1"
+  }
+}
