@@ -20,7 +20,7 @@ const common = {
   // The build chapter contains an example of the latter.
   entry: PATHS.app,
   resolve: {
-    extensions: ['', '.js', 'jsx']
+    extensions: ['', '.js', '.jsx']
   },
   output: {
     path: PATHS.build,
@@ -41,14 +41,16 @@ const common = {
       query: {
         cacheDirectory: true,
         presets: ['react', 'es2015', 'survivejs-kanban']
-      }, 
+      },
       include: PATHS.app
     }
   ]
 },
   plugins: [
     new HtmlwebpackPlugin({
-      title: 'Kanban app'
+      template: 'node_modules/html-webpack-template/index.html',
+      title: 'Kanban app',
+      appMountId: 'app'
     })
   ]
 };
