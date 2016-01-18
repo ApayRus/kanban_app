@@ -1,2 +1,2 @@
 import React from 'react';
-export default () => <div>Learn Webpack</div>; 
+export default ({task}) => <div>{task}</div>;
