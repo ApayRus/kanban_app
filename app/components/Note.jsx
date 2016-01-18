@@ -25,7 +25,7 @@ export default class Note extends React.Component {
     return <div onClick={this.edit}>{this.props.task}</div>;
   };
   edit = () => {
-    this.setState({
+    this.setState({ 
       editing: true
     });
   };
