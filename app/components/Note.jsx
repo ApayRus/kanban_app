@@ -16,10 +16,11 @@ export default class Note extends React.Component {
   }
   renderEdit = () => {
     return <input type="text"
+      //ref={(e) => e ? e.selectionStart = this.props.task.length : null }
       autoFocus={true}
-      placeholder={this.props.task}
+      defaultValue={this.props.task}
       onBlur={this.finishEdit}
-      onKeyPress={this.checkEnter} />
+      onKeyPress={this.checkEnter} />;
   };
   renderNode = () => {
     const onDelete = this.props.onDelete;
