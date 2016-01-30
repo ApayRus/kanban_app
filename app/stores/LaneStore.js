@@ -9,6 +9,7 @@ class LaneStore {
   }
   create(lane) {
     const lanes = this.lanes;
+
     lane.id = uuid.v4();
     lane.notes = lane.notes || [];
 
@@ -16,6 +17,19 @@ class LaneStore {
       lanes: lanes.concat(lane)
     });
   }
+  attachToLane({laneId, noteId}) {
+    const lanes = this.lanes.map(lane => {
+      if(lane.id === laneId) {
+        if(lane.notes.indexOf(noteId) === -1) {
+          lane.notes.push(noteId);
+        }
+        else {
+          console.warn('Already attached note to lane', lanes);
+        }
+        }
+        return lane;
+    });
+  }
 }
 
-export default alt.createStore(LaneStore, 'LaneStore'); 
+export default alt.createStore(LaneStore, 'LaneStore');
